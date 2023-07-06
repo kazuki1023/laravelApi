@@ -25,6 +25,9 @@ class PostController extends Controller
 
             foreach ($response as $item) {
                 echo $item['itemName']."\n";
+                echo $item['itemPrice']."\n";
+                print_r($item['mediumImageUrls']) ."\n";
+                echo "<br>";
             }
         } else {
             echo 'Error:'.$response->getMessage();
