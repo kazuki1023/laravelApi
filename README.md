@@ -53,3 +53,8 @@ php artisan breeze:install
 npm install
 npm run build
 ```
+
+9. 以下のコマンドを実行してください
+```
+composer require guzzlehttp/guzzle
+```
