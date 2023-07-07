@@ -22,13 +22,16 @@ class PostController extends Controller
 
         if ($response->isOk()) {
             echo $response['count']."件見つかりました。\n";
-
             foreach ($response as $item) {
-                echo $item['itemName']."\n";
-                echo $item['itemPrice']."\n";
-                print_r($item['mediumImageUrls']) ."\n";
-                echo "<br>";
+                $items[] = [
+                    'name' => $item['itemName'],
+                    'price' => $item['itemPrice'],
+                    'reviewAverage' => $item['reviewAverage'],
+                    'reviewCount' => $item['reviewCount'],
+                    'itemCode' => $item['itemCode']
+                ];
             }
+            return view('result', compact('items'));
         } else {
             echo 'Error:'.$response->getMessage();
         }
