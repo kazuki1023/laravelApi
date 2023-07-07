@@ -4,7 +4,7 @@
             {{ __('Dashboard') }}
         </h2>
     </x-slot>
-    <form method="post" action="{{ route("dashboard.show")}}" enctype="multipart/form-data">
+    <form method="post" action="{{ route("dashboard.show")}}" enctype="multipart/form-data" class="w-3/4">
         @csrf
         <label for="search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
         <div class="relative">

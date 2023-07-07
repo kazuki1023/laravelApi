@@ -1,5 +1,14 @@
 # laravelApi
 laravelでAPIを叩いてみる
+- ます楽天APIを叩いてみて、検索したら商品情報を取得できるようにする。
+
+## 仕様
+- ![検索画面](./img/dashboard.png)
+- 検索
+
+
+https://github.com/kazuki1023/laravelApi/assets/107235222/d6506bf7-e421-4e9a-b2cb-12ea2f806a66
+
 
 ## 環境構築方法
 1. 
@@ -58,4 +67,9 @@ npm run build
 ```
 composer require guzzlehttp/guzzle
 composer require rakuten-ws/rws-php-sdk
+```
+
+10. .envに以下を追記してください（ただし、apiのkeyは自分で発行してください）
+```
+RAKUTEN_APPLICATION_ID=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 ```
