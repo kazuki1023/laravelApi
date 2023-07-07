@@ -28,7 +28,7 @@
             <tbody>
               @foreach($items as $item)
                 <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                    <th scope="row" class="px-1 font-medium text-gray-900  dark:text-white w-[400px]">
                       {{ $item["name"] }}
                     </th>
                     <td class="px-6 py-4">

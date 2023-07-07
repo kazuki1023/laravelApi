@@ -28,7 +28,10 @@ class PostController extends Controller
                     'price' => $item['itemPrice'],
                     'reviewAverage' => $item['reviewAverage'],
                     'reviewCount' => $item['reviewCount'],
-                    'itemCode' => $item['itemCode']
+                    'itemCode' => $item['itemCode'],
+                    'availability' => $item['availability'],
+                    'taxFlag' => $item['taxFlag'],
+                    'postageFlag' => $item['postageFlag'],
                 ];
             }
             return view('result', compact('items'));
