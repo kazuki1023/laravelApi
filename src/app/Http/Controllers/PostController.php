@@ -21,7 +21,6 @@ class PostController extends Controller
         ]);
 
         if ($response->isOk()) {
-            echo $response['count']."件見つかりました。\n";
             foreach ($response as $item) {
                 $items[] = [
                     'name' => $item['itemName'],
