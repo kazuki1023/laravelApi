@@ -4,7 +4,12 @@ laravelでAPIを叩いてみる
 
 ## 仕様
 - ![検索画面](./img/dashboard.png)
-- ![検索結果画面]()
+- 検索
+
+
+https://github.com/kazuki1023/laravelApi/assets/107235222/d6506bf7-e421-4e9a-b2cb-12ea2f806a66
+
+
 ## 環境構築方法
 1. 
 ```
