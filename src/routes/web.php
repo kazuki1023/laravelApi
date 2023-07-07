@@ -30,5 +30,8 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::post('/dashboard/show', [PostController::class, 'show'])->name('dashboard.show');
+Route::get('/result', function () {
+    return view('result');
+})->name('result');
 
 require __DIR__.'/auth.php';
