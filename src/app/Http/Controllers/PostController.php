@@ -38,4 +38,35 @@ class PostController extends Controller
             echo 'Error:'.$response->getMessage();
         }
     }
+
+    public function detail(Request $request) {
+        // itemcodeを取得
+        $itemCode = $request->query('id');
+        dd($itemCode);
+
+        $client = new RakutenRws_Client();
+        $client->setApplicationId($_ENV['RAKUTEN_APPLICATION_ID']);
+        $response = $client->execute('IchibaItemSearch', [
+            'itemCode' => $itemCode
+        ]);
+
+        if ($response->isOk()) {
+            foreach ($response as $item) {
+                $items[] = [
+                    'name' => $item['itemName'],
+                    'price' => $item['itemPrice'],
+                    'reviewAverage' => $item['reviewAverage'],
+                    'reviewCount' => $item['reviewCount'],
+                    'itemCode' => $item['itemCode'],
+                    'availability' => $item['availability'],
+                    'taxFlag' => $item['taxFlag'],
+                    'postageFlag' => $item['postageFlag'],
+                ];
+            }
+            return view('detail', compact('items'));
+        } else {
+            echo 'Error:'.$response->getMessage();
+        }
+    }
+
 };
