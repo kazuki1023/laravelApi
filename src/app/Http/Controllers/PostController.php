@@ -42,7 +42,6 @@ class PostController extends Controller
     public function detail(Request $request) {
         // itemcodeを取得
         $itemCode = $request->query('id');
-        dd($itemCode);
 
         $client = new RakutenRws_Client();
         $client->setApplicationId($_ENV['RAKUTEN_APPLICATION_ID']);
