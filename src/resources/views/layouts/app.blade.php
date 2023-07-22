@@ -30,7 +30,7 @@
             @endif
 
             <!-- Page Content -->
-            <main class="w-4/5 bg-slate-600">
+            <main class="w-4/6 bg-slate-600">
                 {{ $slot }}
             </main>
         </div>
